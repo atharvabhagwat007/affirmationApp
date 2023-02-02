@@ -15,7 +15,7 @@ import 'package:auto_route/auto_route.dart' as _i3;
 import 'package:auto_route/empty_router_widgets.dart' as _i1;
 import 'package:flutter/material.dart' as _i4;
 
-import '../../presentation/home/screens/home_screen.dart' as _i2;
+import '../../presentation/home/screens/bottom_navigation.dart' as _i2;
 
 class AppRouter extends _i3.RootStackRouter {
   AppRouter([_i4.GlobalKey<_i4.NavigatorState>? navigatorKey])
@@ -29,10 +29,10 @@ class AppRouter extends _i3.RootStackRouter {
         child: const _i1.EmptyRouterPage(),
       );
     },
-    HomeRoute.name: (routeData) {
+    MyNavigationBar.name: (routeData) {
       return _i3.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const _i2.HomeScreen(),
+        child: const _i2.MyNavigationBar(),
       );
     },
   };
@@ -50,7 +50,7 @@ class AppRouter extends _i3.RootStackRouter {
           path: 'initial',
           children: [
             _i3.RouteConfig(
-              HomeRoute.name,
+              MyNavigationBar.name,
               path: '',
               parent: InitialRouter.name,
             )
@@ -73,13 +73,13 @@ class InitialRouter extends _i3.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.HomeScreen]
-class HomeRoute extends _i3.PageRouteInfo<void> {
-  const HomeRoute()
+/// [_i2.MyNavigationBar]
+class MyNavigationBar extends _i3.PageRouteInfo<void> {
+  const MyNavigationBar()
       : super(
-          HomeRoute.name,
+          MyNavigationBar.name,
           path: '',
         );
 
-  static const String name = 'HomeRoute';
+  static const String name = 'MyNavigationBar';
 }

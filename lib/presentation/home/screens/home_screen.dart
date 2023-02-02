@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConstants.black87,
+      backgroundColor: Colors.black,
       appBar: _appBar(),
       body: BlocProvider<HomeBloc>(
         create: (context) => Injector.resolve<HomeBloc>(),
